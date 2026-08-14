@@ -40,6 +40,12 @@ namespace OOP02
                 return DeliveryFee + (Weight * 5) + Extrafees;
             }
         }
+
+        public override void PrintShipmentDetails()
+        {
+            base.PrintShipmentDetails();
+            Console.WriteLine($"Extra Fee: ${Extrafees}");
+        }
         #endregion
     }
 }

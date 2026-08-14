@@ -120,7 +120,7 @@ namespace OOP02
 
         }
 
-        public void PrintShipmentDetails()
+        public virtual void PrintShipmentDetails()
         {
             Console.WriteLine($"Tracking Code: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
@@ -135,6 +135,18 @@ namespace OOP02
         override public string ToString()
         {
             return $"Tracking Code: {TrackingCode}\n Description: {Description}\n Weight: {Weight} kg\n Delivery Fee: ${DeliveryFee}\n Estimated Cost: ${EstimatedCost}, \n Destination Address: {Destination.GetFullAddress()}";
+        }
+
+        public void UpdateWeight(decimal newWeight)
+        {
+            if (newWeight > 0)
+                Weight = newWeight;
+        }
+
+        public void UpdateWeight(decimal newWeight, decimal extraPackingWeight)
+        {
+            if (newWeight > 0 && extraPackingWeight >= 0)
+                Weight = newWeight + extraPackingWeight;
         }
     }
 }

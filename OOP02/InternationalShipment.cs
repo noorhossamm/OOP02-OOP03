@@ -48,5 +48,16 @@ namespace OOP02
             }
         }
 
+        public override void PrintShipmentDetails()
+        {
+            base.PrintShipmentDetails();
+            Console.WriteLine($"Destination Country: {DestinationCountry}");
+            Console.WriteLine($"Customs Fee: ${CustomsFee}");
+        }
+
+        public virtual void GenerateCustomsReport()
+        {
+            Console.WriteLine($"Customs Report: {TrackingCode} - {DestinationCountry} - Customs Fee: {CustomsFee} EGP");
+        }
     }
 }
