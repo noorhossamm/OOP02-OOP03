@@ -1,4 +1,6 @@
-﻿namespace OOP02
+﻿using System.Threading.Channels;
+
+namespace OOP02
 {
     internal class Program
     {
@@ -86,8 +88,8 @@
 
             //DeliveryAddress address1 = new DeliveryAddress("Street 1", "Cairo", 10);
             //StandardShipment s1 = new StandardShipment( "SH001", "Laptop", 3, 80,address1);
-            
-            
+
+
             //DeliveryAddress address2 =new DeliveryAddress("Street 2", "Giza", 20);
             //ExpressShipment s2 = new ExpressShipment("SH002", "Mobile Phone",2,60,address2,30);
 
@@ -138,6 +140,18 @@
 
             // CompletedShipment is sealed, so another class cannot inherit from it .
             // GenerateCustomsReport() is sealed , so it cannot be overridden by another derived class.
+
+            #region ASSIGNMENT 05
+            #region Part01
+            //Q1)
+            //a.Both will refer to the same object as the second variable receives a reference to the same object in memory.
+            //b.No it is just one object but 2 variables refer to it.
+            //c.Copying the reference means both variables point to the same object so changes through one variable affects the other.
+            //Copying the object means creating a separate object  with copied data so changes to one object do not necessarily affect the other.
+
+
+            #endregion
+            #endregion
 
         }
     }
